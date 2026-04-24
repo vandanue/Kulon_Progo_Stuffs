@@ -8,15 +8,19 @@ Created on Mon Mar 23 13:12:51 2026
 
 from obspy import read, Stream
 from pathlib import Path
+import warnings
+warnings.filterwarnings("ignore")
 
 # Path to directory
-root_dir = Path('/media/vandanu/HDD/Project/Penelitian Tapanuli Selatan/01_processing/data/20260410_112710_S43')
-mseed_dir = Path('/media/vandanu/HDD/Project/Penelitian Tapanuli Selatan/01_processing/mseed')
+root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day2_K1/20260416_081325_S7')
+mseed_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/seismik_pasif/mseed')
 station = root_dir.name
 raw = sorted(root_dir.rglob('*cont.0.seg2'))
 
 # Read
 st = read(raw[0], format="SEG2", unpack_headers=True)
+
+print(f'========== READING {len(raw)} FILES ==========')
 
 x_comp = st[0]
 y_comp = st[1]

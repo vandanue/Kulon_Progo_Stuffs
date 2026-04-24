@@ -10,7 +10,7 @@ from obspy import read, Stream
 from pathlib import Path
 
 # Path to directory
-root_dir = Path(r"/media/vandanu/HDD/Project/Penelitian Tapanuli Selatan/01_processing/data/20260410_112710_S43")
+root_dir = Path(r"/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/K5/20260418_075235_S17")
 station = root_dir.name
 raw = sorted(root_dir.rglob('*cont.0.seg2'))
 
