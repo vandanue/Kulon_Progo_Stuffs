@@ -11,14 +11,14 @@ The script reads all SEG-2 files in a directory, extracts the three components (
 **Windows (CMD/PowerShell)**
 
 ```bash
-python -m hvsr_venv venv
+python -m venv hvsr_venv
 venv\Scripts\activate
 ```
 
 **Linux/macOS (Terminal)**
 
 ```bash
-python3 -m hvsr_venv venv
+python3 -m venv hvsr_venv
 source venv/bin/activate
 ```
 
