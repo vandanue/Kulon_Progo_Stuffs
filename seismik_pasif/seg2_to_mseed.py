@@ -12,15 +12,21 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Path to directory
-root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day2_K1/20260416_081325_S7')
+root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day3_K3/20260417_074047_S1/')
 mseed_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/seismik_pasif/mseed')
 station = root_dir.name
+station_name = root_dir.name.split('_', 2)[2]
 raw = sorted(root_dir.rglob('*cont.0.seg2'))
 
 # Read
 st = read(raw[0], format="SEG2", unpack_headers=True)
 
 print(f'========== READING {len(raw)} FILES ==========')
+print(f'STATION NAME:\t\t {station_name}')
+print(f'START TIME:\t\t\t {st.stats.seg2.ACQUISITION_TIME}')
+print(f'LATITUDE:\t\t\t {st.stats.seg2.GPS_POSITION.split(' ')[0]}')
+print(f'LONGITUDE:\t\t\t {st.stats.seg2.GPS_POSITION.split(' ')[1]}')
+
 
 x_comp = st[0]
 y_comp = st[1]
@@ -36,8 +42,6 @@ for f in raw[1:]:
 x_comp.stats.channel = 'EHE'
 y_comp.stats.channel = 'EHN'
 z_comp.stats.channel = 'EHZ'
-
-station_name = root_dir.name.split('_', 2)[2]
 
 three = Stream(traces=[x_comp,y_comp,z_comp])
 
