@@ -6,7 +6,7 @@ The SUMMIT M VIPA seismograph records seismic data in SEG-2 format, with each re
 The script reads all SEG-2 files in a directory, extracts the three components (X, Y, and Z), and merges them into continuous traces. Instead of converting each file individually, the script first combines all segments in memory to ensure a continuous time series. After merging, the traces are assigned standard channel names (EHE, EHN, EHZ) and then written into a single MiniSEED file for each station. This approach reduces file fragmentation and produces a cleaner dataset for analysis.
 
 ### How to Run the Script
-1. Create a virtual environment (better than using global env)
+#### 1. Create a virtual environment (better than using global env)
 
 **Windows (CMD/PowerShell)**
 
@@ -22,7 +22,7 @@ python3 -m venv hvsr_venv
 source venv/bin/activate
 ```
 
-2. Install Dependencies
+#### 2. Install Dependencies
 After activating the virtual environtment, install the dependencies (mainly requires ObsPy, this also include numpy and the other necessary libraries)
 
 **Windows**
@@ -37,7 +37,7 @@ pip install obspy
 pip3 install obspy
 ```
 
-3. Run the Script
+#### 3. Run the Script
 
 > A. Using CMD/Terminal
 
