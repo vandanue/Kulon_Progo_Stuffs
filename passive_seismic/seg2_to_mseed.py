@@ -13,10 +13,13 @@ warnings.filterwarnings("ignore")
 
 # Path to directory
 root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day5_K8/20260419_081817_S25/')
-mseed_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/seismik_pasif/mseed')
+mseed_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/passive_seismic/mseed')
+
+# Search all the continuous SEG files
+raw = sorted(root_dir.rglob('*cont.0.seg2'))
+
 station = root_dir.name
 station_name = root_dir.name.split('_', 2)[2]
-raw = sorted(root_dir.rglob('*cont.0.seg2'))
 
 # Read
 st = read(raw[0], format="SEG2", unpack_headers=True)
