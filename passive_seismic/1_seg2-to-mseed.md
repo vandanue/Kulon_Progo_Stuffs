@@ -43,6 +43,8 @@ pip3 install obspy
 
 Firstly you need to navigate to the script directory, and change the data and converted files directory.
 
+![Change_directory](./img/change_dir.png)
+
 **Windows**
 
 ```bash
