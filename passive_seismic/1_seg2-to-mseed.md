@@ -12,14 +12,14 @@ The script reads all SEG-2 files in a directory, extracts the three components (
 
 ```bash
 python -m venv hvsr_venv
-venv\Scripts\activate
+hvsr_venv\Scripts\activate
 ```
 
 **Linux/macOS (Terminal)**
 
 ```bash
 python3 -m venv hvsr_venv
-source venv/bin/activate
+source hvsr_venv/bin/activate
 ```
 
 ### 2. Install Dependencies
