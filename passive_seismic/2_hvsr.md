@@ -88,7 +88,7 @@ After automatic window selection, manually check the windows to remove unwanted 
 5. Select and remove the windows that correspond to the noisy curves.
 
 <div align="center">
-  <img src="./img/remove_window.gif" alt="remove_curves">
+  <img src="img/remove_window.gif" alt="remove_curves">
   <p><b>Fig 8.</b> Remove noisy curves caused by transient noise</p>
 </div>
 
