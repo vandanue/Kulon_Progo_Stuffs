@@ -12,7 +12,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Path to directory
-root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day5_K8/20260419_081817_S25/')
+root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day8_K6/20260422_133947_S60/')
 mseed_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/passive_seismic/mseed')
 
 # Search all the continuous SEG files
@@ -27,8 +27,8 @@ st = read(raw[0], format="SEG2", unpack_headers=True)
 print(f'========== READING {len(raw)} FILES ==========')
 print(f'STATION NAME:\t\t {station_name}')
 print(f'START TIME:\t\t {st.stats.seg2.ACQUISITION_TIME}')
-print(f'LATITUDE:\t\t {st.stats.seg2.GPS_POSITION.split(' ')[0]}')
-print(f'LONGITUDE:\t\t {st.stats.seg2.GPS_POSITION.split(' ')[1]}')
+#print(f'LATITUDE:\t\t {st.stats.seg2.GPS_POSITION.split(' ')[0]}')
+#print(f'LONGITUDE:\t\t {st.stats.seg2.GPS_POSITION.split(' ')[1]}')
 
 
 x_comp = st[0]
