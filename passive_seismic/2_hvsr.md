@@ -29,7 +29,7 @@ In the "Processing" tab, you can set the parameters for process the H/V computat
 
 ### 2.2. Windowing
 
-The three seismic components, north-south (NS), east-west (EW), and vertical (V), are commonly divided into several time windows. Each window should be at least 10 times longer than the estimated fundamental site period, or longer than 10/$f_0$, as recommended by SESAME ([2004](https://sesame.geopsy.org/Delivrables/Del-D23-HV_User_Guidelines.pdf)). For example, if the estimated fundamental frequency is 3 Hz (period ≈ 0.3 s), the recommended window length is about at least 30 s. HVSR curves are computed as the ratio of the Fourier amplitude spectra of the horizontal and vertical components within each time window. Therefore, it is important to select the most stationary signals and avoid transient signals that are commonly associated with specific sources such as footsteps or nearby traffic.
+The three seismic components, north-south (NS), east-west (EW), and vertical (V), are commonly divided into several time windows. Each window should be at least 10 times longer than the estimated fundamental site period, or longer than 10/$`f_0`$, as recommended by SESAME ([2004](https://sesame.geopsy.org/Delivrables/Del-D23-HV_User_Guidelines.pdf)). For example, if the estimated fundamental frequency is 3 Hz (period ≈ 0.3 s), the recommended window length is about at least 30 s. HVSR curves are computed as the ratio of the Fourier amplitude spectra of the horizontal and vertical components within each time window. Therefore, it is important to select the most stationary signals and avoid transient signals that are commonly associated with specific sources such as footsteps or nearby traffic.
 
 - Window length: 30 s (or at least 30 - 50 s)
 - Overlap: 5%
