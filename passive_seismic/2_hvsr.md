@@ -44,6 +44,6 @@ In Geopsy, windowing can be performed automatically using the STA/LTA algorithm.
 After selecting the appropriate time windows, the HVSR value is calculated from the horizontal and vertical spectral amplitudes within each window. In this study, the horizontal component is represented using the quadratic mean/squared average of the NS and EW components, which is expressed as:
 
 $$
-HVSR = \frac{\sqrt{(NS^2 + EW^2)/2}}{V} \tag{1}
+HVSR = \frac{\sqrt{(NS^2 + EW^2)/2}}{V}
 $$
 
