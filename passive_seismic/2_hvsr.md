@@ -58,12 +58,12 @@ The three seismic components, north-south (NS), east-west (EW), and vertical (V)
 
 To perform automatic windowing in Geopsy:
 
-1. Open the **Windowing** menu.  
-2. Select **STA/LTA** as the window selection method.  
-3. Set the following typical parameters:  
-   - `Max STA/LTA`: 1.5 to 2
-   - `Min STA/LTA`: small positive value (default is usually acceptable)  
-4. Run the automatic selection to generate time windows by click `Select` (Fig. 7).
+1. Open the `General` in H/V toolbox.  
+2. Select `anti-triggering on raw signal` as the window selection method.  
+3. In `Raw Signal`, set the following parameters:  
+   - `Min STA/LTA`: small positive value (default is usually acceptable)
+   - `Max STA/LTA`: 1.5 - 2  
+4. Run the automatic selection to generate time windows by click `Select` and `Start` to compute HVSR (Fig. 7).
 
 The STA/LTA method selects windows with stable amplitudes and avoids energetic transients.
 
@@ -74,7 +74,7 @@ The STA/LTA method selects windows with stable amplitudes and avoids energetic t
 
 <div align="center">
   <img src="./img/remove_mode.png" alt="remove_mode">
-  <p><b>Fig 7.</b> Change the mode to Remove</p>
+  <p><b>Fig 7.</b> Change the windowing mode</p>
 </div>
 
 #### Window QC
@@ -88,8 +88,8 @@ After automatic window selection, manually check the windows to remove unwanted 
 5. Select and remove the windows that correspond to the noisy curves.
 
 <div align="center">
-  <img src="./img/remove_curves.png" alt="remove_curves">
-  <p><b>Fig 8.</b> Noisy curves caused by transient noise</p>
+  <img src="./img/remove_window.gif" alt="remove_curves">
+  <p><b>Fig 8.</b> Remove noisy curves caused by transient noise</p>
 </div>
 
 ### 2.3. Processing parameters
@@ -99,6 +99,35 @@ $$
 HVSR = \frac{\sqrt{(NS^2 + EW^2)/2}}{V}
 $$
 
-The other important processing parameters for computing H/V ratio is smoothing. These paramaters can be modified interactively by clicking on the "Processing" tab beside "Time" tabs (Fig. 6). 
+The other important processing parameters for computing H/V ratio is smoothing. These paramaters can be modified interactively by clicking on the `Processing` tab beside `Time` tabs (Fig. 6). 
 
 #### Type of smoothing parameters
+(_on progress_)
+
+### 2.4. H/V Computation and Output Format
+
+As the HVSR curve becomes cleaner, the number of selected windows typically decreases (Fig. 9).
+
+<div align="center">
+  <img src="./img/final_hv.png" alt="final_hv">
+  <p><b>Fig 9.</b> Final HVSR curve</p>
+</div>
+
+After obtaining the final HVSR curve, save the results as text files (.hv and .log) and as an image (.png).
+
+To export the results in Geopsy:
+
+a. Export as text
+1. Right click on the outside of plot.  
+2. Click `Tools` > `Save results`.
+
+b. Export as image
+1. Right click on the outside of plot.
+2. Click `File` > `Export image` or press `Ctrl+E`
+
+<div align="center">
+  <img src="./img/export_result.png" alt="export_result">
+  <p><b>Fig 10.</b> Exporting the result</p>
+</div>
+
+### 2.5. Checking the Curve Reliability
