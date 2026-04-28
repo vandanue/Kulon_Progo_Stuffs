@@ -11,7 +11,6 @@ After converting the raw recorded signals into MiniSEED format, we import the da
   <p><b>Fig 1.</b> Memory allocation</p>
 </div>
 
-
 There are two ways to import signals into Geopsy: <br>
 (a) open `File > Import Signals > File`, or <br>
 (b) drag and drop the data directly from the file explorer.
@@ -131,3 +130,4 @@ b. Export as image
 </div>
 
 ### 2.5. Checking the Curve Reliability
+(_on progress_)
