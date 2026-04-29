@@ -116,11 +116,11 @@ After obtaining the final HVSR curve, save the results as text files (.hv and .l
 
 To export the results in Geopsy:
 
-a. Export as text
+**a. Export as text**
 1. Right click on the outside of plot.  
 2. Click `Tools` > `Save results`.
 
-b. Export as image
+**b. Export as image**
 1. Right click on the outside of plot.
 2. Click `File` > `Export image` or press `Ctrl+E`
 
@@ -130,4 +130,56 @@ b. Export as image
 </div>
 
 ### 2.5. Checking the Curve Reliability
-(_on progress_)
+
+The HVSR curve must meet the reliability and clear peak criteria according to the SESAME (2004) guidelines. Fig. 11 shows the reliability and clear peak criteria defined by SESAME.
+
+<div align="center">
+  <img src="./img/reliability_table.png" alt="reliability_table">
+  <p><b>Fig 11.</b> Reliability and clear peak criteria (SESAME, 2004)</p>
+</div>
+
+For batch checking, Python can be used to evaluate these criteria using the [hvcheck](https://github.com/vandanue/hvsrcheck_modified.git) module.
+
+#### Download the module
+
+**a. Using `git` (recommended)**  
+
+Make sure that you are using the same virtual environment that was previously used for merging MiniSEED files. Using `git` is recommended since this tool will be useful later.
+
+```bash
+git clone https://github.com/vandanue/hvsrcheck_modified.git
+cd hvsrcheck_modified
+```
+
+**b. Download the `.zip` file**
+
+Download the `.zip` file directly from this [link](https://github.com/vandanue/hvsrcheck_modified.git)
+
+<div align="center">
+  <img src="./img/download_hvcheck.png" alt="download_hvcheck">
+  <p><b>Fig 12.</b> Download compressed file of hvcheck from GitHub</p>
+</div>
+
+Install the module using `pip`
+
+```bash
+pip install .
+```
+
+change `pip` to `pip3` if you are using Linux.
+
+#### Run the script
+Run the `geopsy_hvsrcheck.py` script and change the directory path to the folder that contains all `.hv` and `.log` files.
+
+<div align="center">
+  <img src="./img/hvcheck_dir.png" alt="hvcheck_dir">
+  <p><b>Fig 13.</b> Change the directory of .hv and .log files</p>
+</div>
+
+After changing the folder, you can run the script using Spyder or through the terminal
+
+```bash
+python geopsy_hvsrcheck.py
+```
+
+Change `python` to `python3` if you are using Linux
