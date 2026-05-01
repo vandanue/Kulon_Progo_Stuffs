@@ -42,7 +42,7 @@ In the "Processing" tab, you can set the parameters for process the H/V computat
 
 ### 2.2. Windowing
 
-The three seismic components, north-south (NS), east-west (EW), and vertical (V), are divided into several time windows. Each window should be at least 10 times longer than the estimated fundamental period (10/$`f_0`$), following SESAME ([2004](https://sesame.geopsy.org/Delivrables/Del-D23-HV_User_Guidelines.pdf)). For example, if the estimated fundamental frequency is 3 Hz (period ≈ 0.3 s), the recommended window length is at least 30 s. Windowing is used to select stationary signals and avoid transient noise such as footsteps or nearby traffic.
+The three seismic components, north-south (NS), east-west (EW), and vertical (V), are divided into several time windows. Each window length should be at least 10 times longer than the estimated fundamental period (10/$`f_0`$), following SESAME ([2004](https://sesame.geopsy.org/Delivrables/Del-D23-HV_User_Guidelines.pdf)). For example, if the estimated fundamental frequency is 3 Hz, the recommended window length should be long enough (around 30 s) to increase the reliability of the curve especially in low frequency. Windowing is used to select stationary signals and avoid transient noise such as footsteps or nearby traffic.
 
 **Recommended parameters:**
 - Window length: 30 s (or 30 to 50 s)
@@ -183,3 +183,5 @@ python geopsy_hvsrcheck.py
 ```
 
 Change `python` to `python3` if you are using Linux
+
+The output of 
