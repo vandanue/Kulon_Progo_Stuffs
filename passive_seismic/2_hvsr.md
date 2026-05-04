@@ -100,9 +100,6 @@ $$
 
 The other important processing parameters for computing H/V ratio is smoothing. These paramaters can be modified interactively by clicking on the `Processing` tab beside `Time` tabs (Fig. 6). 
 
-#### Type of smoothing parameters
-(_on progress_)
-
 ### 2.4. H/V Computation and Output Format
 
 As the HVSR curve becomes cleaner, the number of selected windows typically decreases (Fig. 9).
@@ -184,4 +181,90 @@ python geopsy_hvsrcheck.py
 
 Change `python` to `python3` if you are using Linux
 
-The output of 
+The output of `hvsrcheck` would be like this
+
+```
+-----------------------------------------------------------------------
+File Name		: S53.hv
+-----------------------------------------------------------------------
+CRITERIA FOR A RELIABLE H/V CURVE
+RELIABLE 1: OK
+RELIABLE 2: OK
+RELIABLE 3: OK
+
+CLEAR PEAK SUMMARY: 2 out of 6
+H/V IS NOT CLEAR PEAK
+
+-----------------------------------------------------------------------
+RELIABILITY OUTPUT
+RELIABLE 1: CRITERIA FULFILLED 			  11.29 > 0.3333333333333333
+RELIABLE 2: CRITERIA FULFILLED 			  6773.40 > 200
+RELIABLE 3: CRITERIA FULFILLED 			  0.93 < 2
+
+CLEAR PEAK OUTPUT
+CLEAR PEAK 1: CRITERIA NOT FULFILLED 		  A_H/V(f⁻) < 1.81
+CLEAR PEAK 2: CRITERIA NOT FULFILLED 		  A_H/V(f⁺) < 1.81
+CLEAR PEAK 3: CRITERIA FULFILLED 		  3.62 > 2
+CLEAR PEAK 4: CRITERIA NOT FULFILLED 		  f_0 GREATER THAN 5%
+CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  1.32 > 0.56
+CLEAR PEAK 6: CRITERIA FULFILLED 		  1.15 < 1.58
+-----------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------
+File Name		: S6.hv
+-----------------------------------------------------------------------
+CRITERIA FOR A RELIABLE H/V CURVE
+RELIABLE 1: OK
+RELIABLE 2: OK
+RELIABLE 3: OK
+
+CLEAR PEAK SUMMARY: 4 out of 6
+H/V IS NOT CLEAR PEAK
+
+-----------------------------------------------------------------------
+RELIABILITY OUTPUT
+RELIABLE 1: CRITERIA FULFILLED 			  21.85 > 0.4
+RELIABLE 2: CRITERIA FULFILLED 			  10380.79 > 200
+RELIABLE 3: CRITERIA FULFILLED 			  0.66 < 2
+
+CLEAR PEAK OUTPUT
+CLEAR PEAK 1: CRITERIA NOT FULFILLED 		  A_H/V(f⁻) < 1.94
+CLEAR PEAK 2: CRITERIA FULFILLED 		  A_H/V(f⁺) < 1.94
+CLEAR PEAK 3: CRITERIA FULFILLED 		  3.89 > 2
+CLEAR PEAK 4: CRITERIA FULFILLED 		  f_0 ± 5%
+CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  1.82 > 1.09
+CLEAR PEAK 6: CRITERIA FULFILLED 		  1.24 < 1.58
+-----------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------
+File Name		: S32.hv
+-----------------------------------------------------------------------
+CRITERIA FOR A RELIABLE H/V CURVE
+RELIABLE 1: OK
+RELIABLE 2: OK
+RELIABLE 3: OK
+
+CLEAR PEAK SUMMARY: 5 out of 6
+H/V IS CLEAR PEAK
+
+-----------------------------------------------------------------------
+RELIABILITY OUTPUT
+RELIABLE 1: CRITERIA FULFILLED 			  7.83 > 0.25
+RELIABLE 2: CRITERIA FULFILLED 			  5638.19 > 200
+RELIABLE 3: CRITERIA FULFILLED 			  0.62 < 2
+
+CLEAR PEAK OUTPUT
+CLEAR PEAK 1: CRITERIA FULFILLED 		  A_H/V(f⁻) < 1.65
+CLEAR PEAK 2: CRITERIA FULFILLED 		  A_H/V(f⁺) < 1.65
+CLEAR PEAK 3: CRITERIA FULFILLED 		  3.29 > 2
+CLEAR PEAK 4: CRITERIA FULFILLED 		  f_0 ± 5%
+CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  0.43 > 0.39
+CLEAR PEAK 6: CRITERIA FULFILLED 		  1.16 < 1.58
+-----------------------------------------------------------------------
+```
+
+The output will also be saved as `.csv` files. These files are used to verify the results and to iteratively adjust processing parameters for data that need to be reprocessed.
