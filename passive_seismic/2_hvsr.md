@@ -185,63 +185,9 @@ The output of `hvsrcheck` would be like this
 
 ```
 -----------------------------------------------------------------------
-File Name		: S53.hv
------------------------------------------------------------------------
-CRITERIA FOR A RELIABLE H/V CURVE
-RELIABLE 1: OK
-RELIABLE 2: OK
-RELIABLE 3: OK
-
-CLEAR PEAK SUMMARY: 2 out of 6
-H/V IS NOT CLEAR PEAK
-
------------------------------------------------------------------------
-RELIABILITY OUTPUT
-RELIABLE 1: CRITERIA FULFILLED 			  11.29 > 0.3333333333333333
-RELIABLE 2: CRITERIA FULFILLED 			  6773.40 > 200
-RELIABLE 3: CRITERIA FULFILLED 			  0.93 < 2
-
-CLEAR PEAK OUTPUT
-CLEAR PEAK 1: CRITERIA NOT FULFILLED 		  A_H/V(f⁻) < 1.81
-CLEAR PEAK 2: CRITERIA NOT FULFILLED 		  A_H/V(f⁺) < 1.81
-CLEAR PEAK 3: CRITERIA FULFILLED 		  3.62 > 2
-CLEAR PEAK 4: CRITERIA NOT FULFILLED 		  f_0 GREATER THAN 5%
-CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  1.32 > 0.56
-CLEAR PEAK 6: CRITERIA FULFILLED 		  1.15 < 1.58
------------------------------------------------------------------------
-
-
-
------------------------------------------------------------------------
-File Name		: S6.hv
------------------------------------------------------------------------
-CRITERIA FOR A RELIABLE H/V CURVE
-RELIABLE 1: OK
-RELIABLE 2: OK
-RELIABLE 3: OK
-
-CLEAR PEAK SUMMARY: 4 out of 6
-H/V IS NOT CLEAR PEAK
-
------------------------------------------------------------------------
-RELIABILITY OUTPUT
-RELIABLE 1: CRITERIA FULFILLED 			  21.85 > 0.4
-RELIABLE 2: CRITERIA FULFILLED 			  10380.79 > 200
-RELIABLE 3: CRITERIA FULFILLED 			  0.66 < 2
-
-CLEAR PEAK OUTPUT
-CLEAR PEAK 1: CRITERIA NOT FULFILLED 		  A_H/V(f⁻) < 1.94
-CLEAR PEAK 2: CRITERIA FULFILLED 		  A_H/V(f⁺) < 1.94
-CLEAR PEAK 3: CRITERIA FULFILLED 		  3.89 > 2
-CLEAR PEAK 4: CRITERIA FULFILLED 		  f_0 ± 5%
-CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  1.82 > 1.09
-CLEAR PEAK 6: CRITERIA FULFILLED 		  1.24 < 1.58
------------------------------------------------------------------------
-
-
-
------------------------------------------------------------------------
-File Name		: S32.hv
+File Name		: S42.hv
+f0			: 3.9589 Hz
+A0			: 3.76757
 -----------------------------------------------------------------------
 CRITERIA FOR A RELIABLE H/V CURVE
 RELIABLE 1: OK
@@ -253,18 +199,79 @@ H/V IS CLEAR PEAK
 
 -----------------------------------------------------------------------
 RELIABILITY OUTPUT
-RELIABLE 1: CRITERIA FULFILLED 			  7.83 > 0.25
-RELIABLE 2: CRITERIA FULFILLED 			  5638.19 > 200
-RELIABLE 3: CRITERIA FULFILLED 			  0.62 < 2
+RELIABLE 1: CRITERIA FULFILLED 			  3.96 > 0.2222222222222222
+RELIABLE 2: CRITERIA FULFILLED 			  10332.73 > 200
+RELIABLE 3: CRITERIA FULFILLED 			  0.56 < 2
 
 CLEAR PEAK OUTPUT
-CLEAR PEAK 1: CRITERIA FULFILLED 		  A_H/V(f⁻) < 1.65
-CLEAR PEAK 2: CRITERIA FULFILLED 		  A_H/V(f⁺) < 1.65
-CLEAR PEAK 3: CRITERIA FULFILLED 		  3.29 > 2
+CLEAR PEAK 1: CRITERIA FULFILLED 		  A_H/V(f⁻) < 1.88
+CLEAR PEAK 2: CRITERIA FULFILLED 		  A_H/V(f⁺) < 1.88
+CLEAR PEAK 3: CRITERIA FULFILLED 		  3.77 > 2
 CLEAR PEAK 4: CRITERIA FULFILLED 		  f_0 ± 5%
-CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  0.43 > 0.39
+CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  0.44 > 0.20
+CLEAR PEAK 6: CRITERIA FULFILLED 		  1.32 < 1.58
+-----------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------
+File Name		: S55.hv
+f0			: 6.5853 Hz
+A0			: 2.0051
+-----------------------------------------------------------------------
+CRITERIA FOR A RELIABLE H/V CURVE
+RELIABLE 1: OK
+RELIABLE 2: OK
+RELIABLE 3: OK
+
+CLEAR PEAK SUMMARY: 3 out of 6
+H/V IS NOT CLEAR PEAK
+
+-----------------------------------------------------------------------
+RELIABILITY OUTPUT
+RELIABLE 1: CRITERIA FULFILLED 			  6.59 > 0.25
+RELIABLE 2: CRITERIA FULFILLED 			  5004.83 > 200
+RELIABLE 3: CRITERIA FULFILLED 			  0.43 < 2
+
+CLEAR PEAK OUTPUT
+CLEAR PEAK 1: CRITERIA NOT FULFILLED 		  A_H/V(f⁻) < 1.00
+CLEAR PEAK 2: CRITERIA NOT FULFILLED 		  A_H/V(f⁺) < 1.00
+CLEAR PEAK 3: CRITERIA FULFILLED 		  2.01 > 2
+CLEAR PEAK 4: CRITERIA FULFILLED 		  f_0 ± 5%
+CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  1.27 > 0.33
 CLEAR PEAK 6: CRITERIA FULFILLED 		  1.16 < 1.58
 -----------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------
+File Name		: S35.hv
+f0			: 5.57263 Hz
+A0			: 6.02144
+-----------------------------------------------------------------------
+CRITERIA FOR A RELIABLE H/V CURVE
+RELIABLE 1: OK
+RELIABLE 2: OK
+RELIABLE 3: OK
+
+CLEAR PEAK SUMMARY: 5 out of 6
+H/V IS CLEAR PEAK
+
+-----------------------------------------------------------------------
+RELIABILITY OUTPUT
+RELIABLE 1: CRITERIA FULFILLED 			  5.57 > 0.25
+RELIABLE 2: CRITERIA FULFILLED 			  6687.16 > 200
+RELIABLE 3: CRITERIA FULFILLED 			  0.64 < 2
+
+CLEAR PEAK OUTPUT
+CLEAR PEAK 1: CRITERIA FULFILLED 		  A_H/V(f⁻) < 3.01
+CLEAR PEAK 2: CRITERIA FULFILLED 		  A_H/V(f⁺) < 3.01
+CLEAR PEAK 3: CRITERIA FULFILLED 		  6.02 > 2
+CLEAR PEAK 4: CRITERIA FULFILLED 		  f_0 ± 5%
+CLEAR PEAK 5: CRITERIA NOT FULFILLED 		  0.48 > 0.28
+CLEAR PEAK 6: CRITERIA FULFILLED 		  1.43 < 1.58
+-----------------------------------------------------------------------
+
 ```
 
 The output will also be saved as `.csv` files. These files are used to verify the results and to iteratively adjust processing parameters for data that need to be reprocessed.

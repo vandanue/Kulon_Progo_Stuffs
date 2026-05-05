@@ -12,8 +12,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Path to directory
-root_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day8_K6/20260422_133947_S60/')
-mseed_dir = Path('/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/passive_seismic/mseed')
+root_dir = Path(r'/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/data/passive/Day1_K7/20260415_073911_S2')
+mseed_dir = Path(r'/media/vandanu/HDD/00_College/Asdos/Kulon_Progo/passive_seismic/mseed')
 
 # Search all the continuous SEG files
 raw = sorted(root_dir.rglob('*cont.0.seg2'))
