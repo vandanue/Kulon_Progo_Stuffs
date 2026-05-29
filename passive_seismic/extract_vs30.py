@@ -3,7 +3,7 @@ import csv
 
 data = []
 
-for file in Path(".").glob("vs*.dat"):
+for file in Path(".").glob("vs30*.dat"):
     station = file.stem.split("_")[-1]
 
     for line in open(file):
